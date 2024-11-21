@@ -16,14 +16,18 @@ public class Pause : MonoBehaviour
     {
         
     }
-    //Quits the game
-    void Quit()
-    {
-        Application.Quit();
-    }
     //loads the specified scene
-    void LoadScene(int scene)
+    public void LoadScene(int scene)
     {
         SceneManager.LoadScene(scene);
+    }
+    public void Pause()
+    {
+        Time.timeScale = 0;
+    }
+    //Quits the game
+    public void Quit()
+    {
+        Application.Quit();
     }
 }
