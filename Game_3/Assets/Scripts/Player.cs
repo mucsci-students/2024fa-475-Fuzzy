@@ -10,22 +10,45 @@ public class Player : MonoBehaviour
     GameObject player;
 
 
+
     // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyDown("1")) {
+            stopAudio();
             emoteMusic[0].Play();
             player.GetComponent<Animator>().Play("Dance Moves", -1, 0f);
         } 
 
         if(Input.GetKeyDown("2")) {
+            stopAudio();
             emoteMusic[1].Play();
             player.GetComponent<Animator>().Play("Floss", -1, 0f);
-        }
+        } 
 
         if(Input.GetKeyDown("3")) {
-            emoteMusic[1].Play();
+            stopAudio();
+            emoteMusic[2].Play();
             player.GetComponent<Animator>().Play("Breakdance", -1, 0f);
+        } 
+
+        if(Input.GetKeyDown("4")) {
+            stopAudio();
+            emoteMusic[3].Play();
+            player.GetComponent<Animator>().Play("Orange Justice", -1, 0f);
+        } 
+
+        if (Input.GetKeyDown("5")) {
+            stopAudio();
+            player.GetComponent<Animator>().Play("Idle", -1, 0f);
+        }
+
+    }
+
+    void stopAudio() {
+        foreach (AudioSource audio in emoteMusic)
+        {
+            audio.Stop();
         }
     }
 }
