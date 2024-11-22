@@ -14,6 +14,17 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       emote();
+    }
+
+    void stopAudio() {
+        foreach (AudioSource audio in emoteMusic)
+        {
+            audio.Stop();
+        }
+    }
+
+    void emote() {
         if(Input.GetKeyDown("1")) {
             stopAudio();
             emoteMusic[0].Play();
@@ -55,12 +66,5 @@ public class Player : MonoBehaviour
             player.GetComponent<Animator>().Play("Idle", -1, 0f);
         }
 
-    }
-
-    void stopAudio() {
-        foreach (AudioSource audio in emoteMusic)
-        {
-            audio.Stop();
-        }
     }
 }
