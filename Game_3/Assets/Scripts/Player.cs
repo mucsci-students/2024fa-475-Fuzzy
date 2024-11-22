@@ -40,6 +40,12 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown("5")) {
             stopAudio();
+            emoteMusic[4].Play();
+            player.GetComponent<Animator>().Play("Celebrate", -1, 0f);
+        }
+
+        if (Input.GetKeyDown("6")) {
+            stopAudio();
             player.GetComponent<Animator>().Play("Idle", -1, 0f);
         }
 
