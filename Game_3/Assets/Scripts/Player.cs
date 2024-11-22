@@ -46,6 +46,12 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown("6")) {
             stopAudio();
+            emoteMusic[5].Play();
+            player.GetComponent<Animator>().Play("Get Griddy", -1, 0f);
+        }
+
+        if (Input.GetKeyDown("7")) {
+            stopAudio();
             player.GetComponent<Animator>().Play("Idle", -1, 0f);
         }
 
