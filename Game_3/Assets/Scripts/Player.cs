@@ -9,7 +9,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     GameObject player;
 
-
+    void Awake() {
+        stopAudio();
+    }
 
     // Update is called once per frame
     void Update()
