@@ -50,6 +50,10 @@ public class FPSController : PortalTraveller {
     }
 
     void Update () {
+        if(Time.timeScale == 0)
+        {
+            return;
+        }
         if (Input.GetKeyDown (KeyCode.P)) {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;

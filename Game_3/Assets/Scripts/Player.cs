@@ -55,7 +55,7 @@ public class Player : MonoBehaviour
             player.GetComponent<Animator>().Play("Celebrate", -1, 0f);
         }
 
-        if (Input.GetKeyDown("")) {
+        if (Input.GetKeyDown("6")) {
             stopAudio();
             emoteMusic[5].Play();
             player.GetComponent<Animator>().Play("Get Griddy", -1, 0f);
