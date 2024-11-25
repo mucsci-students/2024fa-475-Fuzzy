@@ -30,6 +30,10 @@ public class Portal : MonoBehaviour {
     }
 
     void LateUpdate () {
+        if(Time.timeScale == 0)
+        {
+            return;
+        }
         HandleTravellers ();
     }
 
