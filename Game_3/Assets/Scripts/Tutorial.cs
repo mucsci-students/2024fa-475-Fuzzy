@@ -12,33 +12,30 @@ public class Tutorial : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        runTutorial();
+        StartCoroutine(runTutorial());
+        Debug.Log("Start Ran");
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Destroys the text in each stage after user affrims understanding
-        if (isWaitingForInput && Input.GetKeyDown(KeyCode.Space))
-        {
-            Destroy(tutorialText.gameObject);
-            isWaitingForInput = false;
-        }
-
         // Enables the user to manually skip the tutorial
         if (Input.GetKeyDown(KeyCode.Return)) {
             endTutorial();
         }
     }
 
-    // Initiates the game tutorial
-    void runTutorial() {
+    IEnumerator runTutorial()
+    {
+        Debug.Log("'RunTutorial' Ran");
         tutorialText.text = "Press 'Enter' at any time to skip tutorial";
-        StartCoroutine(DestroyMessageAfterDelay(5f));
-        learnMovement();
-        learnPortals();
-        learnObjective();
-        endTutorial();
+        yield return StartCoroutine(DestroyMessageAfterDelay(5f)); // Wait for initial message to disappear
+
+        yield return StartCoroutine(learnMovement()); // Wait for user to press space in learnMovement
+        yield return StartCoroutine(learnPortals()); // Wait for user to press space in learnPortals
+        yield return StartCoroutine(learnObjective()); // Wait for user to press space in learnObjective
+
+        endTutorial(); // Move to the next scene after the tutorial is done
     }
 
     // Destroys intital instructions after a specified delay
@@ -48,25 +45,31 @@ public class Tutorial : MonoBehaviour
     }
 
     // Instructs the user on basic movement controls
-    void learnMovement() {
+    IEnumerator learnMovement() {
+        Debug.Log("'learnMovement' Ran");
         tutorialText.text = "Use WASD to move forwards, left, backwards, and right. ('Space' to continue)";
-        isWaitingForInput = true;
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
     }
 
     // Instructs the user on basic portal controls
-    void learnPortals() {
+    IEnumerator learnPortals() {
+        yield return new WaitUntil(() => !Input.GetKeyDown(KeyCode.Space));
+        Debug.Log("'learnPortals' Ran");
         tutorialText.text = "Use 'left click' to shoot a portal. ('Space' to continue)";
-        isWaitingForInput = true;
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
     }
 
     // Provides overall game objective / narrative
-    void learnObjective() {
+    IEnumerator learnObjective() {
+                yield return new WaitUntil(() => !Input.GetKeyDown(KeyCode.Space));
+        Debug.Log("'learnObjective' Ran");
         tutorialText.text = "Each level is a puzzle to solve. Use your portals to move to the next stage! ('Space' to continue)";
-        isWaitingForInput = true;
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
     }
 
     // Changes scene from the tutorial to the actual game
     void endTutorial() {
+        Debug.Log("'endTutorial' Ran");
         SceneManager.LoadScene("GameScene");
     }
 }
