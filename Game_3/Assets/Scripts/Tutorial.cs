@@ -41,7 +41,7 @@ public class Tutorial : MonoBehaviour
     // Destroys intital instructions after a specified delay
     private IEnumerator DestroyMessageAfterDelay(float delay) {
         yield return new WaitForSeconds(delay);
-        Destroy(tutorialText.gameObject);
+        //Destroy(tutorialText.gameObject);
     }
 
     // Instructs the user on basic movement controls
