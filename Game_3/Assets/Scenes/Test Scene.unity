@@ -2336,6 +2336,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 454259474031647179, guid: bfcb13c8b95e6411d8174fbe153e4bb4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aaa78d60bfc764377915b044be73f1e0, type: 2}
+    - target: {fileID: 1419317770218004948, guid: bfcb13c8b95e6411d8174fbe153e4bb4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aaa78d60bfc764377915b044be73f1e0, type: 2}
     - target: {fileID: 4205714879578628501, guid: bfcb13c8b95e6411d8174fbe153e4bb4, type: 3}
       propertyPath: linkedPortal
       value: 
@@ -2388,6 +2396,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arch Portal
       objectReference: {fileID: 0}
+    - target: {fileID: 5685527627603176770, guid: bfcb13c8b95e6411d8174fbe153e4bb4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aaa78d60bfc764377915b044be73f1e0, type: 2}
+    - target: {fileID: 9210487973104325648, guid: bfcb13c8b95e6411d8174fbe153e4bb4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aaa78d60bfc764377915b044be73f1e0, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
