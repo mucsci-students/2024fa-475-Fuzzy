@@ -20,56 +20,66 @@ public class Tutorial : MonoBehaviour
     void Update()
     {
         // Enables the user to manually skip the tutorial
-        if (Input.GetKeyDown(KeyCode.Return)) {
-            endTutorial();
+        if (Input.GetKeyDown(KeyCode.Backspace)) {
+            StartCoroutine(endTutorial());
         }
     }
 
     IEnumerator runTutorial()
     {
         Debug.Log("'RunTutorial' Ran");
-        tutorialText.text = "Press 'Enter' at any time to skip tutorial";
+        tutorialText.text = "Press 'Backspace' at any time to skip tutorial";
         yield return StartCoroutine(DestroyMessageAfterDelay(5f)); // Wait for initial message to disappear
 
-        yield return StartCoroutine(learnMovement()); // Wait for user to press space in learnMovement
-        yield return StartCoroutine(learnPortals()); // Wait for user to press space in learnPortals
-        yield return StartCoroutine(learnObjective()); // Wait for user to press space in learnObjective
+        yield return StartCoroutine(learnMovement());
+        yield return StartCoroutine(learnEmotes());
+        yield return StartCoroutine(learnPortals());
+        yield return StartCoroutine(learnObjective());
 
-        endTutorial(); // Move to the next scene after the tutorial is done
+        yield return StartCoroutine(endTutorial()); // Move to the next scene after the tutorial is done
     }
 
     // Destroys intital instructions after a specified delay
     private IEnumerator DestroyMessageAfterDelay(float delay) {
         yield return new WaitForSeconds(delay);
-        //Destroy(tutorialText.gameObject);
     }
 
     // Instructs the user on basic movement controls
     IEnumerator learnMovement() {
         Debug.Log("'learnMovement' Ran");
-        tutorialText.text = "Use WASD to move forwards, left, backwards, and right. ('Space' to continue)";
-        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+        tutorialText.text = "Use WASD to move forwards, left, backwards, and right. You can use 'Space' to jump.  ('Enter' to continue)";
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Return));
+    }
+
+    // Instructs the user on emote controls
+    IEnumerator learnEmotes() {
+        yield return new WaitUntil(() => !Input.GetKeyDown(KeyCode.Return));
+        Debug.Log("'learnEmotes' Ran");
+        tutorialText.text = "Use 1 - 6 to activate emotes. Press 7 to stop.  ('Enter' to continue)";
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Return));
     }
 
     // Instructs the user on basic portal controls
     IEnumerator learnPortals() {
-        yield return new WaitUntil(() => !Input.GetKeyDown(KeyCode.Space));
+        yield return new WaitUntil(() => !Input.GetKeyDown(KeyCode.Return));
         Debug.Log("'learnPortals' Ran");
-        tutorialText.text = "Use 'left click' to shoot a portal. ('Space' to continue)";
-        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+        tutorialText.text = "When you get access to portals, use 'left click' and 'right click' to shoot portals. ('Enter' to continue)";
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Return));
     }
 
     // Provides overall game objective / narrative
     IEnumerator learnObjective() {
-                yield return new WaitUntil(() => !Input.GetKeyDown(KeyCode.Space));
+                yield return new WaitUntil(() => !Input.GetKeyDown(KeyCode.Return));
         Debug.Log("'learnObjective' Ran");
-        tutorialText.text = "Each level is a puzzle to solve. Use your portals to move to the next stage! ('Space' to continue)";
-        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+        tutorialText.text = "Each level is a puzzle to solve. Use your portals to move to the next stage! ('Enter' to continue)";
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Return));
     }
 
     // Changes scene from the tutorial to the actual game
-    void endTutorial() {
+    IEnumerator endTutorial() {
         Debug.Log("'endTutorial' Ran");
-        SceneManager.LoadScene("GameScene");
+        tutorialText.text = "Ending tutorial. One moment...";
+        yield return StartCoroutine(DestroyMessageAfterDelay(5f));
+        SceneManager.LoadScene("Scene2");
     }
 }
