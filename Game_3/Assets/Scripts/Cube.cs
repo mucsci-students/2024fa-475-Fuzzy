@@ -20,6 +20,10 @@ public class Cube : MonoBehaviour
             return;
         }
     }
+    void Move()
+    {
+
+    }
 
     void OnCollisionEnter(Collision other)
     {

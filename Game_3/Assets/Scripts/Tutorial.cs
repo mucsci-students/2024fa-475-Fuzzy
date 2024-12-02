@@ -29,7 +29,7 @@ public class Tutorial : MonoBehaviour
     {
         Debug.Log("'RunTutorial' Ran");
         tutorialText.text = "Press 'Backspace' at any time to skip tutorial";
-        yield return StartCoroutine(DestroyMessageAfterDelay(5f)); // Wait for initial message to disappear
+        //yield return StartCoroutine(DestroyMessageAfterDelay(5f)); // Wait for initial message to disappear
 
         yield return StartCoroutine(learnMovement());
         yield return StartCoroutine(learnEmotes());
@@ -42,6 +42,7 @@ public class Tutorial : MonoBehaviour
     // Destroys intital instructions after a specified delay
     private IEnumerator DestroyMessageAfterDelay(float delay) {
         yield return new WaitForSeconds(delay);
+        Destroy(tutorialText.gameObject);
     }
 
     // Instructs the user on basic movement controls
