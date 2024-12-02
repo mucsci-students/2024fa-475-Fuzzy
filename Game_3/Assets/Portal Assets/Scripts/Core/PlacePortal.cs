@@ -5,28 +5,38 @@ using UnityEngine;
 public class PlacePortal : MonoBehaviour
 {
     [SerializeField]
-    private Portal portal;
+    private Portal portal1;
+    [SerializeField]
+    private Portal portal2;
 
     [SerializeField]
     private LayerMask layerMask;
 
     private void Update() {
         if(Input.GetMouseButtonDown(0)) {
-            FirePortal(transform.position, transform.forward, 250.0f);
+            FirePortal(portal1, transform.position, transform.forward, Mathf.Infinity);
+        }
+        if(Input.GetMouseButtonDown(1)) {
+            FirePortal(portal2, transform.position, transform.forward, Mathf.Infinity);
         }
     }
 
-    private void FirePortal(Vector3 pos, Vector3 dir, float distance) {
+    private void FirePortal(Portal portal, Vector3 pos, Vector3 dir, float distance) {
         RaycastHit hit;
-        Physics.Raycast(pos, dir, out hit, distance, layerMask);
+        //Physics.Raycast(pos, dir, out hit, distance, layerMask);
+        Ray ray;
+        Vector3 mousePos = Input.mousePosition;
+        ray = Camera.main.ScreenPointToRay(mousePos);
 
-        if (Physics.Raycast(pos, dir, out hit, distance, layerMask)) { 
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow); 
-            Debug.Log("Did Hit"); 
+        if (Physics.Raycast(ray, out hit, distance, layerMask)) { 
+            Debug.Log(hit.transform.gameObject.name);
+            Debug.Log(mousePos);
 
-            Debug.Log(hit.point);
-
-            portal.transform.position = hit.point;
+            portal.transform.position = hit.transform.position;
+            float x = portal.transform.position.x;
+            float y = portal.transform.position.y;
+            float z = portal.transform.position.z;
+            portal.transform.position = new Vector3 (x + 3f, y, z);
 
         }
 
