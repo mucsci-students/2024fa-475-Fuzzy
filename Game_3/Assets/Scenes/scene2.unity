@@ -650,8 +650,12 @@ PrefabInstance:
       value: Cube
       objectReference: {fileID: 0}
     - target: {fileID: 3509613471118560027, guid: 9686e52b91b214c8897990ef536d2bb9, type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3509613471118560027, guid: 9686e52b91b214c8897990ef536d2bb9, type: 3}
       propertyPath: m_UseGravity
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3509613471118560027, guid: 9686e52b91b214c8897990ef536d2bb9, type: 3}
       propertyPath: m_Constraints
@@ -710,6 +714,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4591310116445881203, guid: 904bbd0815f4e49d1a84fead6785ee50, type: 3}
+      propertyPath: m_Constraints
+      value: 122
+      objectReference: {fileID: 0}
     - target: {fileID: 4933303644139260072, guid: 904bbd0815f4e49d1a84fead6785ee50, type: 3}
       propertyPath: m_Name
       value: Button
