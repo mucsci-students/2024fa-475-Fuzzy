@@ -4,20 +4,27 @@ using UnityEngine;
 
 public class Cube : MonoBehaviour
 {
+    private bool locked;
+    private Rigidbody body;
     public bool growable;
     public GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        body = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Time.timeScale == 0)
+        if (Time.timeScale == 0)
         {
             return;
+        }
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+
         }
     }
     void Move()
