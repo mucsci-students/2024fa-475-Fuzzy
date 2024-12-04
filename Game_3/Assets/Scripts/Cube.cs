@@ -25,11 +25,11 @@ public class Cube : MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
         growable = false;
     }
-    void OnCollisionExit(Collision other){
+    void OnTriggerExit(Collider other){
         growable = true;
     }
 }

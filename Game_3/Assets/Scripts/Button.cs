@@ -15,11 +15,11 @@ public class Button : MonoBehaviour
     {
         
     }
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
         pressed = true;
     }
-    void OnCollisionExit(Collision other)
+    void OnTriggerExit(Collider other)
     {
         pressed = false;
     }
