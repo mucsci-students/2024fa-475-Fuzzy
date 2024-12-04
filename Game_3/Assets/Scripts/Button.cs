@@ -5,6 +5,8 @@ using UnityEngine;
 public class Button : MonoBehaviour
 {
     public bool pressed;
+    public bool playerPressed;
+    public bool cubePressed;
     void Start()
     {
         
@@ -22,5 +24,6 @@ public class Button : MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         pressed = false;
+        
     }
 }
