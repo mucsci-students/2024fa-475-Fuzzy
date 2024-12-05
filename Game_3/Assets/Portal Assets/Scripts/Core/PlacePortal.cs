@@ -32,7 +32,7 @@ public class PlacePortal : MonoBehaviour
             Debug.Log(hit.transform.gameObject.name);
             Debug.Log(mousePos);
 
-            portal.transform.position = hit.transform.position;
+            portal.transform.position = ray.GetPoint(hit.distance-0.1f);//hit.transform.position;
             float x = portal.transform.position.x;
             float y = portal.transform.position.y;
             float z = portal.transform.position.z;
