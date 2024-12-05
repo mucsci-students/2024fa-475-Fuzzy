@@ -85,7 +85,7 @@ public class EmotePuzzle : MonoBehaviour
 
     IEnumerator playPuzzleMusicOrder() {
         yield return new WaitForSeconds(8f);
-        tutorialText.text = "Listen Carefully... emote in the correct order to procede!";
+        tutorialText.text = "Listen Carefully... emote in the correct order to proceed!";
         for(int i = 0; i < 6; i++) {
             puzzleEmoteMusic[i].Play();
             puzzleEmoteMusic[i].SetScheduledEndTime(AudioSettings.dspTime+(5f));

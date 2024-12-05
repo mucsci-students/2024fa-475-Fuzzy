@@ -63,11 +63,11 @@ public class Cube : MonoBehaviour
             return;
         }
         RaycastHit hit;
-        Vector3 mousePos = Input.mousePosition;
-        Ray ray = Camera.main.ScreenPointToRay(mousePos);
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if(Physics.Raycast(ray, out hit, 100) && hit.collider.tag == "Cube")
         {
-            distanceToPlayer = Vector3.Distance(ray.origin, transform.position);//hit.distance;
+            distanceToPlayer = Vector3.Distance(ray.origin, transform.position);
+            //distanceToPlayer = hit.distance;
             grabbed = true;
             body.angularVelocity = Vector3.zero;
             body.useGravity = false;
@@ -75,8 +75,7 @@ public class Cube : MonoBehaviour
     }
     void Move()
     {
-        Vector3 mousePos = Input.mousePosition;
-        Ray ray = Camera.main.ScreenPointToRay(mousePos);
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         Vector3 angle = transform.position - ray.GetPoint(distanceToPlayer);
         body.AddForce(-angle);
         distanceToPlayer = Vector3.Distance(ray.origin, transform.position);
@@ -93,9 +92,12 @@ public class Cube : MonoBehaviour
         {
             way = 1;
         }
-        float scalar = transform.localScale.x + transform.localScale.x * 0.1f * way;
-        transform.localScale = new Vector3(scalar, scalar, scalar);
-        body.mass += body.mass * 0.1f * way;
+        if(transform.localScale.x > 0.1 && transform.localScale.x < 10)
+        {
+            float scalar = transform.localScale.x + transform.localScale.x * 0.1f * way;
+            transform.localScale = new Vector3(scalar, scalar, scalar);
+            body.mass += body.mass * 0.1f * way;
+        }
     }
     void OnTriggerEnter(Collider other)
     {
