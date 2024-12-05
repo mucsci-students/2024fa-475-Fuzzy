@@ -3752,6 +3752,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Breakdance
       objectReference: {fileID: 0}
+    - target: {fileID: 3049006150794032116, guid: e6e659e869f504016a55d8fa1377995f, type: 3}
+      propertyPath: m_Radius
+      value: 0.32
+      objectReference: {fileID: 0}
     - target: {fileID: 4449658732845791820, guid: e6e659e869f504016a55d8fa1377995f, type: 3}
       propertyPath: m_Name
       value: Orange Justice

@@ -13,6 +13,10 @@ public class PlacePortal : MonoBehaviour
     private LayerMask layerMask;
 
     private void Update() {
+        if(Time.timeScale == 0)
+        {
+            return;
+        }
         if(Input.GetMouseButtonDown(0)) {
             FirePortal(portal1, transform.position, transform.forward, Mathf.Infinity);
         }
@@ -32,11 +36,11 @@ public class PlacePortal : MonoBehaviour
             Debug.Log(hit.transform.gameObject.name);
             Debug.Log(mousePos);
 
-            portal.transform.position = ray.GetPoint(hit.distance-0.1f);//hit.transform.position;
-            float x = portal.transform.position.x;
-            float y = portal.transform.position.y;
-            float z = portal.transform.position.z;
-            portal.transform.position = new Vector3 (x + 3f, y, z);
+            portal.transform.position = ray.GetPoint(hit.distance-0.5f);//hit.transform.position;
+            //float x = portal.transform.position.x;
+            //float y = portal.transform.position.y;
+            //float z = portal.transform.position.z;
+            //portal.transform.position = new Vector3 (x, y, z);
 
         }
 
