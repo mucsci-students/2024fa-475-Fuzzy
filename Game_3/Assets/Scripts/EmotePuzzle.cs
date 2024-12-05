@@ -54,6 +54,10 @@ public class EmotePuzzle : MonoBehaviour
             currentEmotePlayed++;
         }
 
+        if(Input.GetKeyDown("8")) {
+            StartCoroutine(playPuzzleMusicOrder());
+        }
+
 
         if(playerSolution.Count == 6) {
             for (int i = 0; i < 6; i++) {
@@ -64,6 +68,7 @@ public class EmotePuzzle : MonoBehaviour
                 Debug.Log("CurrentEmotePlayed reset: " + currentEmotePlayed);
                 currentEmotePlayed = 0;
                 Debug.Log("CurrentEmotePlayed reset: " + currentEmotePlayed);
+                tutorialText.text = "Puzzle Failed!";
             }
         }
         }
@@ -74,11 +79,12 @@ public class EmotePuzzle : MonoBehaviour
 
         if(allEmotesPlayed) {
             Debug.Log("Emote puzzle solved!");
+            tutorialText.text = "Emote Puzzle solved!!";
         }
     }
 
     IEnumerator playPuzzleMusicOrder() {
-        yield return new WaitForSeconds(20f);
+        yield return new WaitForSeconds(8f);
         tutorialText.text = "Listen Carefully... emote in the correct order to procede!";
         for(int i = 0; i < 6; i++) {
             puzzleEmoteMusic[i].Play();
