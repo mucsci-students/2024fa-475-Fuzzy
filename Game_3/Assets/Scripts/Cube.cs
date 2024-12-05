@@ -66,8 +66,8 @@ public class Cube : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if(Physics.Raycast(ray, out hit, 100) && hit.collider.tag == "Cube")
         {
-            distanceToPlayer = Vector3.Distance(ray.origin, transform.position);
-            //distanceToPlayer = hit.distance;
+            //distanceToPlayer = Vector3.Distance(ray.origin, transform.position);
+            distanceToPlayer = hit.distance;
             grabbed = true;
             body.angularVelocity = Vector3.zero;
             body.useGravity = false;
@@ -78,10 +78,13 @@ public class Cube : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         Vector3 angle = transform.position - ray.GetPoint(distanceToPlayer);
         body.AddForce(-angle);
-        distanceToPlayer = Vector3.Distance(ray.origin, transform.position);
-        //transform.position = ray.GetPoint(distanceToPlayer);
-        //check for collision
-        
+        //updats distance but keeps it some distance away from the player
+        float tempDistance = Vector3.Distance(ray.origin, transform.position) - 0.05f;
+        distanceToPlayer = Mathf.Max(1f + 1f * transform.localScale.x, tempDistance);
+        if(distanceToPlayer > tempDistance)
+        {
+            body.AddForce(ray.direction);
+        }
     }
     //bigger is false to shrink
     //grow is only called when grabbed and growable
@@ -90,14 +93,19 @@ public class Cube : MonoBehaviour
         int way = -1;
         if(bigger)
         {
+            if(transform.localScale.x > 10)
+            {
+                return;
+            }
             way = 1;
         }
-        if(transform.localScale.x > 0.1 && transform.localScale.x < 10)
+        else if(transform.localScale.x < 0.2f)
         {
-            float scalar = transform.localScale.x + transform.localScale.x * 0.1f * way;
-            transform.localScale = new Vector3(scalar, scalar, scalar);
-            body.mass += body.mass * 0.1f * way;
+            return;
         }
+        float scalar = transform.localScale.x + transform.localScale.x * 0.05f * way;
+        transform.localScale = new Vector3(scalar, scalar, scalar);
+        body.mass += body.mass * 0.05f * way;
     }
     void OnTriggerEnter(Collider other)
     {
