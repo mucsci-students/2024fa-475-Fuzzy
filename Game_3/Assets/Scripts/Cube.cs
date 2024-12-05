@@ -38,16 +38,13 @@ public class Cube : MonoBehaviour
         if(grabbed && Input.GetKey(KeyCode.LeftShift))
         {
             Move();
-            if(growable)
+            if(growable && Input.GetKey(KeyCode.R))
             {
-                if(Input.GetKey(KeyCode.R))
-                {
-                    Grow(true);
-                }
-                else if(Input.GetKey(KeyCode.F))
-                {
-                    Grow(false);
-                }
+                Grow(true);
+            }
+            else if(Input.GetKey(KeyCode.F))
+            {
+                Grow(false);
             }
         }
         else
@@ -70,7 +67,7 @@ public class Cube : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(mousePos);
         if(Physics.Raycast(ray, out hit, 100) && hit.collider.tag == "Cube")
         {
-            distanceToPlayer = hit.distance;
+            distanceToPlayer = Vector3.Distance(ray.origin, transform.position);//hit.distance;
             grabbed = true;
             body.angularVelocity = Vector3.zero;
             body.useGravity = false;
@@ -80,7 +77,10 @@ public class Cube : MonoBehaviour
     {
         Vector3 mousePos = Input.mousePosition;
         Ray ray = Camera.main.ScreenPointToRay(mousePos);
-        transform.position = ray.GetPoint(distanceToPlayer);
+        Vector3 angle = transform.position - ray.GetPoint(distanceToPlayer);
+        body.AddForce(-angle);
+        distanceToPlayer = Vector3.Distance(ray.origin, transform.position);
+        //transform.position = ray.GetPoint(distanceToPlayer);
         //check for collision
         
     }

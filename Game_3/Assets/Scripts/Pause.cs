@@ -34,7 +34,7 @@ public class Pause : MonoBehaviour
     {
         Time.timeScale = 1;
         pauseUI.SetActive(false);
-        LoadScene(script.level);
+        SceneManager.LoadScene(script.level);
     }
     public void PauseToggle()
     {
