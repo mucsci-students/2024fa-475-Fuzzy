@@ -37,15 +37,19 @@ public class PlacePortal : MonoBehaviour
             Vector3 newPoint = ray.GetPoint(hit.distance-0.5f);
             //calculate orientation of portal
             float yRot = -hit.normal.x;
+            // if flat ground, face player
             if(hit.normal.y == 1)
             {
                 yRot = ray.direction.x;
-                if(ray.direction.z < 0){
+                if(ray.direction.z < 0)
+                {
                     yRot *= -1;
                 }
             }
             //only do if room for portal
-            if(true)
+            float width = 1.22f;// 1/2 the width of portal
+            Vector3 direction = new Vector3(0f,0f,0f);
+            if( !(Physics.Raycast(newPoint, direction, width) || Physics.Raycast(newPoint, direction, width)))
             {
                 portal.transform.position = newPoint;
                 portal.transform.eulerAngles = new Vector3(0, yRot * 90, 0);
