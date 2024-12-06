@@ -11,17 +11,17 @@ public class PlacePortal : MonoBehaviour
 
     [SerializeField]
     private LayerMask layerMask;
-
+    private int maxRange = 200;
     private void Update() {
         if(Time.timeScale == 0)
         {
             return;
         }
         if(Input.GetMouseButtonDown(0)) {
-            FirePortal(portal1, transform.position, transform.forward, Mathf.Infinity);
+            FirePortal(portal1, transform.position, transform.forward, maxRange);
         }
         if(Input.GetMouseButtonDown(1)) {
-            FirePortal(portal2, transform.position, transform.forward, Mathf.Infinity);
+            FirePortal(portal2, transform.position, transform.forward, maxRange);
         }
     }
 
@@ -31,12 +31,25 @@ public class PlacePortal : MonoBehaviour
         Ray ray;
         Vector3 mousePos = Input.mousePosition;
         ray = Camera.main.ScreenPointToRay(mousePos);
-
-        if (Physics.Raycast(ray, out hit, distance, layerMask)) { 
-            Debug.Log(hit.transform.gameObject.name);
+        if (Physics.Raycast(ray, out hit, distance, layerMask)) 
+        {
             Debug.Log(mousePos);
             Vector3 newPoint = ray.GetPoint(hit.distance-0.5f);
-            portal.transform.position = newPoint;//hit.transform.position;
+            //calculate orientation of portal
+            float yRot = -hit.normal.x;
+            if(hit.normal.y == 1)
+            {
+                yRot = ray.direction.x;
+                if(ray.direction.z < 0){
+                    yRot *= -1;
+                }
+            }
+            //only do if room for portal
+            if(true)
+            {
+                portal.transform.position = newPoint;
+                portal.transform.eulerAngles = new Vector3(0, yRot * 90, 0);
+            }
             //hit.point  hit.collider.transfrom
             //transform.rotation
             //float x = portal.transform.position.x;

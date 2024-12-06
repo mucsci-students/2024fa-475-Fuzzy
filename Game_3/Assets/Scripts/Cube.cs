@@ -32,7 +32,7 @@ public class Cube : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift) && !grabbed)
         {
             {
-                Grab(false);
+                Grab(true);
             }
         }
         if (grabbed && Input.GetKey(KeyCode.LeftShift))
@@ -60,14 +60,14 @@ public class Cube : MonoBehaviour
         }
         else
         {
-            Grab(true);
+            Grab(false);
         }
         
     }
     //if release is true, then release the cube
-    void Grab(bool release)
+    void Grab(bool keep)
     {
-        if(release)
+        if(!keep)
         {
             body.useGravity = true;
             grabbed = false;
@@ -87,9 +87,15 @@ public class Cube : MonoBehaviour
     private void Move(int val)
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //keep player from grabbing while on cube
+        if(ray.direction.y < -0.75f * transform.localScale.x && player.transform.position.y > transform.position.y)
+        {
+            Grab(false);
+            return;
+        }
         Vector3 angle = ray.GetPoint(distanceToPlayer) - transform.position;
         //updats distance but keeps it some distance away from the player
-        float tempDistance = Vector3.Distance(ray.origin, transform.position) - 0.000f;
+        float tempDistance = Vector3.Distance(ray.origin, transform.position);
         distanceToPlayer = Mathf.Max(1f + 1f * transform.localScale.x, tempDistance);
         //if too close to player, add force in direction away from player
         if (distanceToPlayer > tempDistance)
