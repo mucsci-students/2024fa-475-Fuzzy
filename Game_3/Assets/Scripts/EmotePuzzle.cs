@@ -68,7 +68,8 @@ public class EmotePuzzle : MonoBehaviour
                 Debug.Log("CurrentEmotePlayed reset: " + currentEmotePlayed);
                 currentEmotePlayed = 0;
                 Debug.Log("CurrentEmotePlayed reset: " + currentEmotePlayed);
-                tutorialText.text = "Puzzle Failed!";
+                tutorialText.text = "Puzzle Failed >:( Try Again! Press 8 to listen to the audio snippet again.";
+                
             }
         }
         }
@@ -78,7 +79,6 @@ public class EmotePuzzle : MonoBehaviour
         }
 
         if(allEmotesPlayed) {
-            Debug.Log("Emote puzzle solved!");
             tutorialText.text = "Emote Puzzle solved!!";
         }
     }
