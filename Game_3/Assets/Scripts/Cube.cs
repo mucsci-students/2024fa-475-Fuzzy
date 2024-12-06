@@ -87,15 +87,23 @@ public class Cube : MonoBehaviour
     private void Move(int val)
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Vector3 angle = transform.position - ray.GetPoint(distanceToPlayer);
-        body.AddForce(-angle);
+        Vector3 angle = ray.GetPoint(distanceToPlayer) - transform.position;
         //updats distance but keeps it some distance away from the player
-        float tempDistance = Vector3.Distance(ray.origin, transform.position) - 0.1f;
+        float tempDistance = Vector3.Distance(ray.origin, transform.position) - 0.02f;
         distanceToPlayer = Mathf.Max(1f + 1f * transform.localScale.x, tempDistance);
-        if(distanceToPlayer > tempDistance)
+        if (distanceToPlayer > tempDistance || val == 1)
         {
-            body.AddForce(ray.direction);
+            angle += ray.direction;
         }
+        else if (val == 2)
+        {
+            angle -= ray.direction;
+        }
+        if(body.velocity.magnitude > 10)
+        {
+            angle -= body.velocity.normalized;
+        }
+        body.AddForce(angle);
     }
     //bigger is false to shrink
     //grow is only called when grabbed and growable

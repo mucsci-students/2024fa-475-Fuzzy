@@ -3,7 +3,7 @@
 Controls: WASD for walking, Space to jump
 numbers 1-6 for emotes and 7 to stop
 hold left shift to grab and keep cube
-while holding shift, R and F grow and shrink, and T and G push and pull
+while holding shift, R grows, F shrinks, and T pushes, G pulls
 
 Resources Referenced: 
 
