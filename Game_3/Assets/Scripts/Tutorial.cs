@@ -50,7 +50,7 @@ public class Tutorial : MonoBehaviour
     IEnumerator learnMovement() {
         if (waitForSkip != true) {
             Debug.Log("'learnMovement' Ran");
-            tutorialText.text = "Use WASD to move forwards, left, backwards, and right. You can use 'Space' to jump.  ('Enter' to continue)";
+            tutorialText.text = "Use WASD to move forwards, left, backwards, and right. You can use 'Space' to jump and 'Shift' to sprint.  ('Enter' to continue)";
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Return));
         }
     }
