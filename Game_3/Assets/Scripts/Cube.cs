@@ -35,9 +35,20 @@ public class Cube : MonoBehaviour
                 Grab(false);
             }
         }
-        if(grabbed && Input.GetKey(KeyCode.LeftShift))
+        if (grabbed && Input.GetKey(KeyCode.LeftShift))
         {
-            Move();
+            int moveVal = 0;
+            //pulling and pushing
+            if (Input.GetKey(KeyCode.T))
+            {
+                moveVal = 1;
+            }
+            else if (Input.GetKey(KeyCode.G))
+            {
+                moveVal = 2;
+            }
+            Move(moveVal);
+            //growing and shrinking
             if(growable && Input.GetKey(KeyCode.R))
             {
                 Grow(true);
@@ -73,13 +84,13 @@ public class Cube : MonoBehaviour
             body.useGravity = false;
         }
     }
-    void Move()
+    private void Move(int val)
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         Vector3 angle = transform.position - ray.GetPoint(distanceToPlayer);
         body.AddForce(-angle);
         //updats distance but keeps it some distance away from the player
-        float tempDistance = Vector3.Distance(ray.origin, transform.position) - 0.05f;
+        float tempDistance = Vector3.Distance(ray.origin, transform.position) - 0.1f;
         distanceToPlayer = Mathf.Max(1f + 1f * transform.localScale.x, tempDistance);
         if(distanceToPlayer > tempDistance)
         {
@@ -88,7 +99,7 @@ public class Cube : MonoBehaviour
     }
     //bigger is false to shrink
     //grow is only called when grabbed and growable
-    void Grow(bool bigger)
+    private void Grow(bool bigger)
     {
         int way = -1;
         if(bigger)
