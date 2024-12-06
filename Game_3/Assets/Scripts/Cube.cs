@@ -89,16 +89,27 @@ public class Cube : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         Vector3 angle = ray.GetPoint(distanceToPlayer) - transform.position;
         //updats distance but keeps it some distance away from the player
-        float tempDistance = Vector3.Distance(ray.origin, transform.position) - 0.02f;
+        float tempDistance = Vector3.Distance(ray.origin, transform.position) - 0.000f;
         distanceToPlayer = Mathf.Max(1f + 1f * transform.localScale.x, tempDistance);
-        if (distanceToPlayer > tempDistance || val == 1)
+        //if too close to player, add force in direction away from player
+        if (distanceToPlayer > tempDistance)
         {
             angle += ray.direction;
         }
-        else if (val == 2)
+        else
         {
-            angle -= ray.direction;
+            //if pushed or player walking towards, push away
+            if(val == 1 || Input.GetKey(KeyCode.W))
+            {
+                angle += ray.direction;
+            }
+            //if pulled or player walking away, pull towards
+            if (val == 2 || Input.GetKey(KeyCode.S))
+            {
+                angle -= ray.direction;
+            }
         }
+        //slow down if speed too fast
         if(body.velocity.magnitude > 10)
         {
             angle -= body.velocity.normalized;

@@ -35,8 +35,10 @@ public class PlacePortal : MonoBehaviour
         if (Physics.Raycast(ray, out hit, distance, layerMask)) { 
             Debug.Log(hit.transform.gameObject.name);
             Debug.Log(mousePos);
-
-            portal.transform.position = ray.GetPoint(hit.distance-0.5f);//hit.transform.position;
+            Vector3 newPoint = ray.GetPoint(hit.distance-0.5f);
+            portal.transform.position = newPoint;//hit.transform.position;
+            //hit.point  hit.collider.transfrom
+            //transform.rotation
             //float x = portal.transform.position.x;
             //float y = portal.transform.position.y;
             //float z = portal.transform.position.z;
