@@ -38,22 +38,28 @@ public class PlacePortal : MonoBehaviour
             //calculate orientation of portal
             float yRot = -hit.normal.x;
             // if flat ground, face player
-            if(hit.normal.y == 1)
+            if (hit.normal.y == 1)
             {
                 yRot = ray.direction.x;
-                if(ray.direction.z < 0)
+                if (ray.direction.z < 0)
                 {
                     yRot *= -1;
                 }
             }
+            if(portal == portal1)
+            {
+                //add two, but if greater than 2 (equivalent to 180 degrees), set lower
+                yRot += 2;
+            }
             //only do if room for portal
             float width = 1.22f;// 1/2 the width of portal
             Vector3 direction = new Vector3(0f,0f,0f);
-            if( !(Physics.Raycast(newPoint, direction, width) || Physics.Raycast(newPoint, direction, width)))
+            if (!(Physics.Raycast(newPoint, direction, width) || Physics.Raycast(newPoint, direction, width)))
             {
                 portal.transform.position = newPoint;
                 portal.transform.eulerAngles = new Vector3(0, yRot * 90, 0);
             }
+            
             //hit.point  hit.collider.transfrom
             //transform.rotation
             //float x = portal.transform.position.x;
