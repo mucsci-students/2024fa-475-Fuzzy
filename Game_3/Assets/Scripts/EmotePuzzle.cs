@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class EmotePuzzle : MonoBehaviour
@@ -75,22 +76,41 @@ public class EmotePuzzle : MonoBehaviour
         }
 
         if(currentEmotePlayed == 6) {
+            if(!allEmotesPlayed) {
+                tutorialText.text = "Emote Puzzle solved!! Teleporting to final puzzle >:)";
+                StartCoroutine(countdown());
+            }
             allEmotesPlayed = true;
+
+            if(allEmotesPlayed) {
+            StartCoroutine(teleportToNewWorld());
+            }
         }
 
-        if(allEmotesPlayed) {
-            tutorialText.text = "Emote Puzzle solved!!";
-        }
+        
     }
 
     IEnumerator playPuzzleMusicOrder() {
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(4f);
         tutorialText.text = "Listen Carefully... emote in the correct order to proceed!";
         for(int i = 0; i < 6; i++) {
             puzzleEmoteMusic[i].Play();
             puzzleEmoteMusic[i].SetScheduledEndTime(AudioSettings.dspTime+(5f));
             yield return new WaitForSeconds(5f);
         }
+    }
+
+    IEnumerator countdown() {
+        yield return new WaitForSeconds(8f);
+        for(int i = 10; i > 0; i--) {
+            yield return new WaitForSeconds(1f);
+            tutorialText.text = i.ToString();
+        }
+    }
+
+    IEnumerator teleportToNewWorld() {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("Scene4");
     }
 
     

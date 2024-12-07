@@ -226,53 +226,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1579241630799410176, guid: 9ac771c9e070a4970b0e30d23ccb2244, type: 3}
---- !u!1 &74945665
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 74945666}
-  - component: {fileID: 74945667}
-  m_Layer: 0
-  m_Name: Emote Tracker 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &74945666
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 74945665}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -257.669, y: -31.937664, z: 222.93248}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &74945667
+--- !u!114 &74945667 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 3678338815024045554, guid: 286151007bdf7d74588758de1db1b814, type: 3}
+  m_PrefabInstance: {fileID: 8849639328659472468}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 74945665}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d09c407db8c4a9f419b2b6e6ec11f88e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emoteTracker: {fileID: 74945667}
-  trackerNum: 2
-  emotePlayed: 0
 --- !u!1001 &183046307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -381,53 +345,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1579241630799410176, guid: 9ac771c9e070a4970b0e30d23ccb2244, type: 3}
---- !u!1 &194887679
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 194887680}
-  - component: {fileID: 194887681}
-  m_Layer: 0
-  m_Name: Emote Tracker 6
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &194887680
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 194887679}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -257.669, y: -31.937664, z: 222.93248}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &194887681
+--- !u!114 &194887681 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 525708601029771907, guid: 286151007bdf7d74588758de1db1b814, type: 3}
+  m_PrefabInstance: {fileID: 8849639328659472468}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 194887679}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d09c407db8c4a9f419b2b6e6ec11f88e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emoteTracker: {fileID: 194887681}
-  trackerNum: 6
-  emotePlayed: 0
 --- !u!1 &235879146 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1377023210505237880, guid: e6e659e869f504016a55d8fa1377995f, type: 3}
@@ -695,53 +623,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9686e52b91b214c8897990ef536d2bb9, type: 3}
---- !u!1 &380734749
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 380734750}
-  - component: {fileID: 380734751}
-  m_Layer: 0
-  m_Name: Emote Tracker 5
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &380734750
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 380734749}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -257.669, y: -31.937664, z: 222.93248}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &380734751
+--- !u!114 &380734751 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 4838824992566383947, guid: 286151007bdf7d74588758de1db1b814, type: 3}
+  m_PrefabInstance: {fileID: 8849639328659472468}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 380734749}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d09c407db8c4a9f419b2b6e6ec11f88e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emoteTracker: {fileID: 380734751}
-  trackerNum: 5
-  emotePlayed: 0
 --- !u!1001 &457843029
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -962,53 +854,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7560277172612512602, guid: 2de6c7c7f2f2f4a2b8d21682b37e8a21, type: 3}
---- !u!1 &515123319
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 515123320}
-  - component: {fileID: 515123321}
-  m_Layer: 0
-  m_Name: Emote Tracker 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &515123320
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 515123319}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -257.669, y: -31.937664, z: 222.93248}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &515123321
+--- !u!114 &515123321 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 6220486269469618208, guid: 286151007bdf7d74588758de1db1b814, type: 3}
+  m_PrefabInstance: {fileID: 8849639328659472468}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 515123319}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d09c407db8c4a9f419b2b6e6ec11f88e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emoteTracker: {fileID: 515123321}
-  trackerNum: 1
-  emotePlayed: 0
 --- !u!114 &537247566 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4205714879578628501, guid: bfcb13c8b95e6411d8174fbe153e4bb4, type: 3}
@@ -2444,140 +2300,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2494185979427425891, guid: 06694f1a7a8544822b9402c98d602719, type: 3}
---- !u!1 &1121404208
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1121404213}
-  - component: {fileID: 1121404212}
-  - component: {fileID: 1121404211}
-  - component: {fileID: 1121404210}
-  - component: {fileID: 1121404209}
-  m_Layer: 0
-  m_Name: Emote Puzzle Obj
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1121404209
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1121404208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f81615c530aae743b35c1aea04681b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  emoteTrackers:
-  - {fileID: 380734751}
-  - {fileID: 74945667}
-  - {fileID: 194887681}
-  - {fileID: 1967032129}
-  - {fileID: 515123321}
-  - {fileID: 1660136809}
-  puzzleEmoteMusic:
-  - {fileID: 1373249794}
-  - {fileID: 1687156624}
-  - {fileID: 1911460848}
-  - {fileID: 1648462299}
-  - {fileID: 1643870484}
-  - {fileID: 1907655669}
-  playerSolution: 
-  tutorialText: {fileID: 1401445310}
---- !u!65 &1121404210
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1121404208}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1121404211
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1121404208}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1121404212
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1121404208}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1121404213
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1121404208}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.13, y: 4.47, z: 15.58}
-  m_LocalScale: {x: 9.509999, y: 9.509999, z: 9.509999}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1131278166
 GameObject:
   m_ObjectHideFlags: 0
@@ -3420,53 +3142,17 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 7183382807970261050, guid: e6e659e869f504016a55d8fa1377995f, type: 3}
   m_PrefabInstance: {fileID: 5504587257301410331}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1660136807
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1660136808}
-  - component: {fileID: 1660136809}
-  m_Layer: 0
-  m_Name: Emote Tracker 3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1660136808
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1660136807}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -257.669, y: -31.937664, z: 222.93248}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1660136809
+--- !u!114 &1660136809 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1520672054365424957, guid: 286151007bdf7d74588758de1db1b814, type: 3}
+  m_PrefabInstance: {fileID: 8849639328659472468}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1660136807}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d09c407db8c4a9f419b2b6e6ec11f88e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emoteTracker: {fileID: 1660136809}
-  trackerNum: 3
-  emotePlayed: 0
 --- !u!82 &1687156624 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 1208095194712692939, guid: e6e659e869f504016a55d8fa1377995f, type: 3}
@@ -3555,53 +3241,17 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 7071564367435625588, guid: e6e659e869f504016a55d8fa1377995f, type: 3}
   m_PrefabInstance: {fileID: 5504587257301410331}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1967032127
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1967032128}
-  - component: {fileID: 1967032129}
-  m_Layer: 0
-  m_Name: Emote Tracker 4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1967032128
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967032127}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -257.669, y: -31.937664, z: 222.93248}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1967032129
+--- !u!114 &1967032129 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 2545249824060027170, guid: 286151007bdf7d74588758de1db1b814, type: 3}
+  m_PrefabInstance: {fileID: 8849639328659472468}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967032127}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d09c407db8c4a9f419b2b6e6ec11f88e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emoteTracker: {fileID: 1967032129}
-  trackerNum: 4
-  emotePlayed: 0
 --- !u!1 &1971881311
 GameObject:
   m_ObjectHideFlags: 0
@@ -3850,6 +3500,115 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1001 &599974904070085839
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2191315584107423437, guid: ed59550428ade754daa4653fb057ba74, type: 3}
+      propertyPath: tutorialText
+      value: 
+      objectReference: {fileID: 1401445310}
+    - target: {fileID: 2191315584107423437, guid: ed59550428ade754daa4653fb057ba74, type: 3}
+      propertyPath: emoteTrackers.Array.data[0]
+      value: 
+      objectReference: {fileID: 380734751}
+    - target: {fileID: 2191315584107423437, guid: ed59550428ade754daa4653fb057ba74, type: 3}
+      propertyPath: emoteTrackers.Array.data[1]
+      value: 
+      objectReference: {fileID: 74945667}
+    - target: {fileID: 2191315584107423437, guid: ed59550428ade754daa4653fb057ba74, type: 3}
+      propertyPath: emoteTrackers.Array.data[2]
+      value: 
+      objectReference: {fileID: 194887681}
+    - target: {fileID: 2191315584107423437, guid: ed59550428ade754daa4653fb057ba74, type: 3}
+      propertyPath: emoteTrackers.Array.data[3]
+      value: 
+      objectReference: {fileID: 1967032129}
+    - target: {fileID: 2191315584107423437, guid: ed59550428ade754daa4653fb057ba74, type: 3}
+      propertyPath: emoteTrackers.Array.data[4]
+      value: 
+      objectReference: {fileID: 515123321}
+    - target: {fileID: 2191315584107423437, guid: ed59550428ade754daa4653fb057ba74, type: 3}
+      propertyPath: emoteTrackers.Array.data[5]
+      value: 
+      objectReference: {fileID: 1660136809}
+    - target: {fileID: 2191315584107423437, guid: ed59550428ade754daa4653fb057ba74, type: 3}
+      propertyPath: puzzleEmoteMusic.Array.data[0]
+      value: 
+      objectReference: {fileID: 1373249794}
+    - target: {fileID: 2191315584107423437, guid: ed59550428ade754daa4653fb057ba74, type: 3}
+      propertyPath: puzzleEmoteMusic.Array.data[1]
+      value: 
+      objectReference: {fileID: 1687156624}
+    - target: {fileID: 2191315584107423437, guid: ed59550428ade754daa4653fb057ba74, type: 3}
+      propertyPath: puzzleEmoteMusic.Array.data[2]
+      value: 
+      objectReference: {fileID: 1911460848}
+    - target: {fileID: 2191315584107423437, guid: ed59550428ade754daa4653fb057ba74, type: 3}
+      propertyPath: puzzleEmoteMusic.Array.data[3]
+      value: 
+      objectReference: {fileID: 1648462299}
+    - target: {fileID: 2191315584107423437, guid: ed59550428ade754daa4653fb057ba74, type: 3}
+      propertyPath: puzzleEmoteMusic.Array.data[4]
+      value: 
+      objectReference: {fileID: 1643870484}
+    - target: {fileID: 2191315584107423437, guid: ed59550428ade754daa4653fb057ba74, type: 3}
+      propertyPath: puzzleEmoteMusic.Array.data[5]
+      value: 
+      objectReference: {fileID: 1907655669}
+    - target: {fileID: 4364981812446592811, guid: ed59550428ade754daa4653fb057ba74, type: 3}
+      propertyPath: m_Name
+      value: Emote Puzzle Obj
+      objectReference: {fileID: 0}
+    - target: {fileID: 8782880294439333263, guid: ed59550428ade754daa4653fb057ba74, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8782880294439333263, guid: ed59550428ade754daa4653fb057ba74, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 8782880294439333263, guid: ed59550428ade754daa4653fb057ba74, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 8782880294439333263, guid: ed59550428ade754daa4653fb057ba74, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8782880294439333263, guid: ed59550428ade754daa4653fb057ba74, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8782880294439333263, guid: ed59550428ade754daa4653fb057ba74, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8782880294439333263, guid: ed59550428ade754daa4653fb057ba74, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8782880294439333263, guid: ed59550428ade754daa4653fb057ba74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8782880294439333263, guid: ed59550428ade754daa4653fb057ba74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8782880294439333263, guid: ed59550428ade754daa4653fb057ba74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ed59550428ade754daa4653fb057ba74, type: 3}
 --- !u!1001 &5504587257301410331
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3959,6 +3718,63 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 235879152}
   m_SourcePrefab: {fileID: 100100000, guid: e6e659e869f504016a55d8fa1377995f, type: 3}
+--- !u!1001 &8849639328659472468
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3009473320636719537, guid: 286151007bdf7d74588758de1db1b814, type: 3}
+      propertyPath: m_Name
+      value: -- Emote Trackers --
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952617356876592036, guid: 286151007bdf7d74588758de1db1b814, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -228.17735
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952617356876592036, guid: 286151007bdf7d74588758de1db1b814, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -36.80119
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952617356876592036, guid: 286151007bdf7d74588758de1db1b814, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 242.5852
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952617356876592036, guid: 286151007bdf7d74588758de1db1b814, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952617356876592036, guid: 286151007bdf7d74588758de1db1b814, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952617356876592036, guid: 286151007bdf7d74588758de1db1b814, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952617356876592036, guid: 286151007bdf7d74588758de1db1b814, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952617356876592036, guid: 286151007bdf7d74588758de1db1b814, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952617356876592036, guid: 286151007bdf7d74588758de1db1b814, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952617356876592036, guid: 286151007bdf7d74588758de1db1b814, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 286151007bdf7d74588758de1db1b814, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3972,12 +3788,7 @@ SceneRoots:
   - {fileID: 5504587257301410331}
   - {fileID: 730232149}
   - {fileID: 1401553654}
-  - {fileID: 515123320}
-  - {fileID: 74945666}
-  - {fileID: 1660136808}
-  - {fileID: 1967032128}
-  - {fileID: 380734750}
-  - {fileID: 194887680}
-  - {fileID: 1121404213}
+  - {fileID: 599974904070085839}
   - {fileID: 977874063}
   - {fileID: 332679840}
+  - {fileID: 8849639328659472468}
