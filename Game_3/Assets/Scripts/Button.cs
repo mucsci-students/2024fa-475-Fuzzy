@@ -29,11 +29,12 @@ public class Button : MonoBehaviour
         //openObj.SetActive(!TurnOff);
         //closedObj.transform.Rotate(new Vector3(0f,80f,0f));
         StartCoroutine(Open(turnOff, 115));
-        activated = true;
+        activated = !turnOff;
 
     }
     IEnumerator Open(bool open, int dist)
     {
+        Debug.Log("open");
         int speed = 1;
         if (open)
         {
