@@ -5,6 +5,7 @@ using UnityEngine;
 public class Button : MonoBehaviour
 {
     private bool activated;    
+    public bool multi;
     public bool pressed;
     public bool toggleable;
     //public bool playerPressed;
@@ -20,7 +21,11 @@ public class Button : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Time.timeScale == 0)
+        {
+            return;
+        }
+
     }
     //turn off is true is result of button press should be deactivated
     void activate(bool turnOff)
@@ -51,6 +56,16 @@ public class Button : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         pressed = true;
+        if(multi)
+        {
+            foreach( Button b in transform.parent.GetComponentsInChildren<Button>())
+            {   
+                if(!b.pressed)
+                {
+                    return;
+                }
+            }
+        }
         if(!activated)
         {
             activate(false);
