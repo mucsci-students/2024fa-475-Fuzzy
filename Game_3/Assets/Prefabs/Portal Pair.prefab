@@ -93,6 +93,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arch Portal (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4205714879578628507, guid: bfcb13c8b95e6411d8174fbe153e4bb4, type: 3}
+      propertyPath: m_TagString
+      value: Portal2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -181,6 +185,10 @@ PrefabInstance:
     - target: {fileID: 4205714879578628507, guid: bfcb13c8b95e6411d8174fbe153e4bb4, type: 3}
       propertyPath: m_Name
       value: Arch Portal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205714879578628507, guid: bfcb13c8b95e6411d8174fbe153e4bb4, type: 3}
+      propertyPath: m_TagString
+      value: Portal1
       objectReference: {fileID: 0}
     - target: {fileID: 5685527627603176770, guid: bfcb13c8b95e6411d8174fbe153e4bb4, type: 3}
       propertyPath: m_Materials.Array.data[0]

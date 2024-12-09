@@ -34,27 +34,34 @@ public class PlacePortal : MonoBehaviour
         if (Physics.Raycast(ray, out hit, distance, layerMask)) 
         {
             Debug.Log(mousePos);
-            Vector3 newPoint = ray.GetPoint(hit.distance-0.5f);
+            Vector3 newPoint = ray.GetPoint(hit.distance);
             //calculate orientation of portal
             float yRot = -hit.normal.x;
             // if flat ground, face player
             if (hit.normal.y == 1)
             {
                 yRot = ray.direction.x;
+                // if on lower side of unit circle, mirror portal rotation
                 if (ray.direction.z < 0)
                 {
                     yRot *= -1;
+                    yRot -= 2;
                 }
             }
-            if(portal == portal1)
+            else
+            {
+                //put 1/2 from walls to allow player through
+                newPoint += hit.normal * 0.5f;
+            }
+            if(portal.tag == "Portal1")
             {
                 //add two, but if greater than 2 (equivalent to 180 degrees), set lower
                 yRot += 2;
             }
             //only do if room for portal
             float width = 1.22f;// 1/2 the width of portal
-            Vector3 direction = new Vector3(0f,0f,0f);
-            if (!(Physics.Raycast(newPoint, direction, width) || Physics.Raycast(newPoint, direction, width)))
+            Vector3 rayDir = new Vector3(0f,0f,0f);
+            if (!(Physics.Raycast(newPoint, rayDir, width) || Physics.Raycast(newPoint, -rayDir, width)))
             {
                 portal.transform.position = newPoint;
                 portal.transform.eulerAngles = new Vector3(0, yRot * 90, 0);

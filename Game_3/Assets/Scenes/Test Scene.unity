@@ -3483,6 +3483,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 33031780270007423, guid: 6c86d0115280c9d4eaf9e92357455884, type: 3}
+      propertyPath: m_TagString
+      value: Portal1
+      objectReference: {fileID: 0}
     - target: {fileID: 1289529594603487031, guid: 6c86d0115280c9d4eaf9e92357455884, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.8784387
@@ -3522,6 +3526,10 @@ PrefabInstance:
     - target: {fileID: 1289529594603487031, guid: 6c86d0115280c9d4eaf9e92357455884, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390112402272115204, guid: 6c86d0115280c9d4eaf9e92357455884, type: 3}
+      propertyPath: m_TagString
+      value: Portal2
       objectReference: {fileID: 0}
     - target: {fileID: 8890051600636068119, guid: 6c86d0115280c9d4eaf9e92357455884, type: 3}
       propertyPath: m_Name
