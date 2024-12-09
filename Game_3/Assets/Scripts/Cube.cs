@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Cube : MonoBehaviour
 {
-    public bool grabbed;
     private int sidesBlocked;
     private float distanceToPlayer;
+    private Vector3 startPos;
     private Rigidbody body;
     private GameObject player;
+    public int minHeight;
+    public bool grabbed;
     public bool growable;
 
     // Start is called before the first frame update
@@ -16,6 +18,8 @@ public class Cube : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         body = GetComponent<Rigidbody>();
+        startPos = transform.position;
+
     }
 
     // Update is called once per frame
@@ -26,6 +30,10 @@ public class Cube : MonoBehaviour
             return;
         }
         checkKeys();
+        if (transform.position.y < minHeight)
+        {
+            transform.position = startPos;
+        }
     }
     void checkKeys()
     {
@@ -88,7 +96,7 @@ public class Cube : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         //keep player from grabbing while on cube
-        if(ray.direction.y < -0.75f * transform.localScale.x && player.transform.position.y > transform.position.y)
+        if(ray.direction.y < -(.8f - 0.05f * transform.localScale.x) && player.transform.position.y > transform.position.y)
         {
             Grab(false);
             return;

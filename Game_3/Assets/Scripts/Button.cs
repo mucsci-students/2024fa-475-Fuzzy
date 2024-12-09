@@ -9,8 +9,8 @@ public class Button : MonoBehaviour
     public bool toggleable;
     //public bool playerPressed;
     //public bool cubePressed;
-    public GameObject closedObj;
-    public GameObject openObj;
+    public GameObject leftObj;
+    public GameObject rightObj;
 
     void Start()
     {
@@ -23,12 +23,29 @@ public class Button : MonoBehaviour
         
     }
     //turn off is true is result of button press should be deactivated
-    void activate(bool TurnOff)
+    void activate(bool turnOff)
     {
-        closedObj.SetActive(false);
-        closedObj.SetActive(false);
+        //closedObj.SetActive(TurnOff);
+        //openObj.SetActive(!TurnOff);
+        //closedObj.transform.Rotate(new Vector3(0f,80f,0f));
+        StartCoroutine(Open(turnOff, 115));
         activated = true;
 
+    }
+    IEnumerator Open(bool open, int dist)
+    {
+        int speed = 1;
+        if (open)
+        {
+            speed = -1;
+        }
+        while (dist > 0)
+        {
+            yield return new WaitForSeconds (0.01f);
+            leftObj.transform.Rotate (new Vector3(0f, -speed, 0f));
+            rightObj.transform.Rotate (new Vector3(0f, speed, 0f));
+            dist--;
+        }
     }
     void OnTriggerEnter(Collider other)
     {
