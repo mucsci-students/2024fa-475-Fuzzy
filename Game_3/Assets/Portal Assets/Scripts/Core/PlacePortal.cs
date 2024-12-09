@@ -60,11 +60,13 @@ public class PlacePortal : MonoBehaviour
             }
             //only do if room for portal
             float width = 1.22f;// 1/2 the width of portal
-            Vector3 rayDir = new Vector3(0f,0f,0f);
+            yRot *= 90;
+            Vector3 rayDir = new Vector3(0f, 0f, 0f);
+            //Vector3 rayDir = new Vector3(Mathf.Sin(yRot * Mathf.Deg2Rad), 0f, Mathf.Cos(yRot * Mathf.Deg2Rad));
             if (!(Physics.Raycast(newPoint, rayDir, width) || Physics.Raycast(newPoint, -rayDir, width)))
             {
                 portal.transform.position = newPoint;
-                portal.transform.eulerAngles = new Vector3(0, yRot * 90, 0);
+                portal.transform.eulerAngles = new Vector3(0, yRot, 0);
             }
             
             //hit.point  hit.collider.transfrom
