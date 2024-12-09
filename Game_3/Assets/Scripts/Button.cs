@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class Button : MonoBehaviour
 {
+    private bool activated;    
     public bool pressed;
-    public bool playerPressed;
-    public bool cubePressed;
+    public bool toggleable;
+    //public bool playerPressed;
+    //public bool cubePressed;
+    public GameObject closedObj;
+    public GameObject openObj;
+
     void Start()
     {
         
@@ -17,13 +22,28 @@ public class Button : MonoBehaviour
     {
         
     }
+    //turn off is true is result of button press should be deactivated
+    void activate(bool TurnOff)
+    {
+        closedObj.SetActive(false);
+        closedObj.SetActive(false);
+        activated = true;
+
+    }
     void OnTriggerEnter(Collider other)
     {
         pressed = true;
+        if(!activated)
+        {
+            activate(false);
+        }
     }
     void OnTriggerExit(Collider other)
     {
         pressed = false;
-        
+        if(toggleable)
+        {
+            activate(true);
+        }
     }
 }
