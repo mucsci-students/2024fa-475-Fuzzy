@@ -25,7 +25,7 @@ public class ButtonPuzzle : MonoBehaviour
     IEnumerator DisplayText(string message, string next)
     {
         box.text = message;
-        yield return new WaitForSeconds(minDispTime + message.length * 0.1f);
+        yield return new WaitForSeconds(minDispTime + message.Length * 0.1f);
         StartCoroutine(DisplayText(next, ""));
     }
 
