@@ -3,7 +3,7 @@
 public class MainCamera : MonoBehaviour {
 
     Portal[] portals;
-
+    private bool masked;
     void Awake () {
         portals = FindObjectsOfType<Portal> ();
     }
@@ -21,6 +21,24 @@ public class MainCamera : MonoBehaviour {
             portals[i].PostPortalRender ();
         }
 
+    }
+    //hide hat when looking up in some scenes
+    void Update()
+    {
+        if(Time.timeScale == 0)
+        {
+            return;
+        }
+        if(transform.localRotation.x < 0 && !masked)
+        {
+            transform.gameObject.GetComponent<Camera>().cullingMask -= 16;
+            masked = true;
+        }
+        if(transform.localRotation.x > 0 && masked)
+        {
+            masked = false;
+            transform.gameObject.GetComponent<Camera>().cullingMask += 16;
+        }
     }
 
 }
