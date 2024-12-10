@@ -160,6 +160,11 @@ public class Cube : MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         sidesBlocked--;
+        //reset pressed buttons, if toggleable
+        if(other.tag == "Button" && other.transform.parent.GetComponent<Button>().toggleable)
+        {
+            other.GetComponent<Rigidbody>().AddForce(new Vector3(0, 10, 0));
+        }
         if (sidesBlocked <= 0)
         {
             growable = true;

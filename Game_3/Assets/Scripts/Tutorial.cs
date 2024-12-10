@@ -20,6 +20,10 @@ public class Tutorial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Time.timeScale == 0)
+        {
+            return;
+        }
         // Enables the user to manually skip the tutorial
         if (Input.GetKeyDown(KeyCode.Backspace)) {
             waitForSkip = true;

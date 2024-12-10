@@ -27,7 +27,7 @@ public class Button : MonoBehaviour
         }
 
     }
-    //turn off is true is result of button press should be deactivated
+    //turn off is true if result of button press should be deactivated
     void activate(bool turnOff)
     {
         //closedObj.SetActive(TurnOff);
@@ -74,6 +74,16 @@ public class Button : MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         pressed = false;
+        if(multi)
+        {
+            foreach( Button b in transform.parent.GetComponentsInChildren<Button>())
+            {   
+                if(b.pressed)
+                {
+                    return;
+                }
+            }
+        }
         if(toggleable)
         {
             activate(true);

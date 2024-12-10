@@ -24,6 +24,10 @@ public class EmoteTracker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Time.timeScale == 0)
+        {
+            return;
+        }
         trackNumString = trackerNum.ToString();
 
         if(Input.GetKeyDown(trackNumString)) {
