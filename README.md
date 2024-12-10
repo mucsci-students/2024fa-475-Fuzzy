@@ -1,9 +1,11 @@
 # 2024fa-475-Fuzzy
 
+Developers: Tommy Nguyen, John Hershey, and Tim King
+
 Controls: WASD for walking, Space to jump
 numbers 1-6 for emotes and 7 to stop
 hold left shift to grab and keep cube
-while holding shift, R grows, F shrinks, and T pushes, G pulls
+while holding shift, R grows object, F shrinks, and T pushes away from player, G pulls to player
 
 Resources Referenced: 
 
