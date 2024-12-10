@@ -33,6 +33,8 @@ public class FPSController : PortalTraveller {
     bool jumping;
     float lastGroundedTime;
     bool disabled;
+    private float minHeight = -60;
+    private Vector3 startPos;
 
     void Start () {
         cam = Camera.main;
@@ -47,6 +49,7 @@ public class FPSController : PortalTraveller {
         pitch = cam.transform.localEulerAngles.x;
         smoothYaw = yaw;
         smoothPitch = pitch;
+        startPos = transform.position;
     }
 
     void Update () {
@@ -67,6 +70,10 @@ public class FPSController : PortalTraveller {
 
         if (disabled) {
             return;
+        }
+        if(minHeight > transform.position.y)
+        {
+            transform.position = startPos;
         }
 
         Vector2 input = new Vector2 (Input.GetAxisRaw ("Horizontal"), Input.GetAxisRaw ("Vertical"));

@@ -6,7 +6,7 @@ public class Cube : MonoBehaviour
 {
     private int sidesBlocked;
     private float distanceToPlayer;
-     private int maxHeight = -30;
+     private int maxHeight = -20;
     private Vector3 startPos;
     private Rigidbody body;
     private GameObject player;
