@@ -163,7 +163,7 @@ public class Cube : MonoBehaviour
         //reset pressed buttons, if toggleable
         if(other.tag == "Button" && other.transform.parent.GetComponent<Button>().toggleable)
         {
-            other.GetComponent<Rigidbody>().AddForce(new Vector3(0, 10, 0));
+            other.GetComponent<Rigidbody>().AddForce(other.transform.up);
         }
         if (sidesBlocked <= 0)
         {

@@ -368,11 +368,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af643c894566a4c9ab808822d92f2875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activated: 0
+  multi: 0
   pressed: 0
-  playerPressed: 0
-  cubePressed: 0
-  closedObj: {fileID: 0}
-  openObj: {fileID: 0}
+  toggleable: 0
+  leftObj: {fileID: 0}
+  rightObj: {fileID: 0}
 --- !u!65 &1415723433535876922
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -804,6 +805,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 007f61e52955b174fa7220e62e7f37e8, type: 2}
+    - target: {fileID: 5586194727140991091, guid: 700ef578df3a54a03a78c3169f7f9dec, type: 3}
+      propertyPath: m_Mass
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5586194727140991091, guid: 700ef578df3a54a03a78c3169f7f9dec, type: 3}
       propertyPath: m_UseGravity
       value: 0

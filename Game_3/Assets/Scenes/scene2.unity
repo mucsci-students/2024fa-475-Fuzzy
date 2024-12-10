@@ -1148,15 +1148,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5598251246178234105, guid: 904bbd0815f4e49d1a84fead6785ee50, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -60.854
+      value: -60.418
       objectReference: {fileID: 0}
     - target: {fileID: 5598251246178234105, guid: 904bbd0815f4e49d1a84fead6785ee50, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 31.831
+      value: 31.307
       objectReference: {fileID: 0}
     - target: {fileID: 5598251246178234105, guid: 904bbd0815f4e49d1a84fead6785ee50, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.956
+      value: -15.949
       objectReference: {fileID: 0}
     - target: {fileID: 5598251246178234105, guid: 904bbd0815f4e49d1a84fead6785ee50, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1252,7 +1252,6 @@ Transform:
   - {fileID: 610107786}
   - {fileID: 920588662}
   - {fileID: 482681033}
-  - {fileID: 1339792608}
   - {fileID: 1092547625}
   - {fileID: 1692382363}
   m_Father: {fileID: 0}
@@ -1794,6 +1793,7 @@ Transform:
   m_Children:
   - {fileID: 779379411}
   - {fileID: 1410298440}
+  - {fileID: 1339792608}
   m_Father: {fileID: 266201552}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &485346285 stripped
@@ -4467,7 +4467,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 266201552}
+    m_TransformParent: {fileID: 482681033}
     m_Modifications:
     - target: {fileID: 4933303644139260072, guid: 904bbd0815f4e49d1a84fead6785ee50, type: 3}
       propertyPath: m_Name
@@ -4487,15 +4487,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5598251246178234105, guid: 904bbd0815f4e49d1a84fead6785ee50, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.81
+      value: 19.959026
       objectReference: {fileID: 0}
     - target: {fileID: 5598251246178234105, guid: 904bbd0815f4e49d1a84fead6785ee50, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.15
+      value: -6.2007294
       objectReference: {fileID: 0}
     - target: {fileID: 5598251246178234105, guid: 904bbd0815f4e49d1a84fead6785ee50, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.84
+      value: 2.1628466
       objectReference: {fileID: 0}
     - target: {fileID: 5598251246178234105, guid: 904bbd0815f4e49d1a84fead6785ee50, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4530,16 +4530,28 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5723794179272009120, guid: 904bbd0815f4e49d1a84fead6785ee50, type: 3}
+      propertyPath: multi
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5723794179272009120, guid: 904bbd0815f4e49d1a84fead6785ee50, type: 3}
       propertyPath: leftObj
       value: 
       objectReference: {fileID: 884939621}
+    - target: {fileID: 5723794179272009120, guid: 904bbd0815f4e49d1a84fead6785ee50, type: 3}
+      propertyPath: pressed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5723794179272009120, guid: 904bbd0815f4e49d1a84fead6785ee50, type: 3}
       propertyPath: rightObj
       value: 
       objectReference: {fileID: 1943860002}
     - target: {fileID: 5723794179272009120, guid: 904bbd0815f4e49d1a84fead6785ee50, type: 3}
-      propertyPath: toggleable
+      propertyPath: activated
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5723794179272009120, guid: 904bbd0815f4e49d1a84fead6785ee50, type: 3}
+      propertyPath: toggleable
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4562,6 +4574,10 @@ PrefabInstance:
     - target: {fileID: 1892894649417814327, guid: 9686e52b91b214c8897990ef536d2bb9, type: 3}
       propertyPath: m_Name
       value: Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 2563123223923861625, guid: 9686e52b91b214c8897990ef536d2bb9, type: 3}
+      propertyPath: minHeight
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 3509613471118560027, guid: 9686e52b91b214c8897990ef536d2bb9, type: 3}
       propertyPath: m_Mass
@@ -4849,7 +4865,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4591310116445881203, guid: 904bbd0815f4e49d1a84fead6785ee50, type: 3}
       propertyPath: m_UseGravity
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4933303644139260072, guid: 904bbd0815f4e49d1a84fead6785ee50, type: 3}
       propertyPath: m_Name

@@ -65,7 +65,7 @@ public class Button : MonoBehaviour
         {
             foreach (Button b in transform.parent.GetComponentsInChildren<Button>())
             {   
-                if(!b.pressed)
+                if(!b.pressed && b.multi)
                 {
                     return;
                 }
