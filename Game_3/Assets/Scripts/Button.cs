@@ -41,6 +41,7 @@ public class Button : MonoBehaviour
                 b.activated = active;
             }
         }
+        activated = active;
     }
     IEnumerator Open(bool open, int dist)
     {
