@@ -6,6 +6,7 @@ public class Cube : MonoBehaviour
 {
     private int sidesBlocked;
     private float distanceToPlayer;
+     private int maxHeight = -30;
     private Vector3 startPos;
     private Rigidbody body;
     private GameObject player;
@@ -30,7 +31,7 @@ public class Cube : MonoBehaviour
             return;
         }
         checkKeys();
-        if (transform.position.y < minHeight)
+        if (transform.position.y < minHeight || transform.position.y > maxHeight)
         {
             transform.position = startPos;
         }
@@ -83,7 +84,7 @@ public class Cube : MonoBehaviour
         }
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if(Physics.Raycast(ray, out hit, 100) && hit.collider.tag == "Cube")
+        if(Physics.Raycast(ray, out hit, 100) && hit.collider.tag == "Cube" && hit.transform == transform)
         {
             //distanceToPlayer = Vector3.Distance(ray.origin, transform.position);
             distanceToPlayer = hit.distance;
