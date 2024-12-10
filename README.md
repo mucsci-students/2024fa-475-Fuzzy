@@ -4,11 +4,11 @@ Developers: Tommy Nguyen, John Hershey, and Tim King
 
 Controls: WASD for walking, Space to jump
 
-numbers 1-6 for emotes and 7 to stop
+  numbers 1-6 for emotes and 7 to stop
 
-hold left shift to grab and keep cube
+  hold left shift to grab and keep cube
 
-while holding shift, R grows object, F shrinks, and T pushes away from player, G pulls to player
+  while holding shift, R grows object, F shrinks, and T pushes away from player, G pulls to player
 
 Resources Referenced: 
 
@@ -18,7 +18,11 @@ Note on this: His implementation of portals is ingenius. Math a little over my h
 
 * Used VRCMods to find the emotes .anim pack
 * Tommy already owned the 3d model assets (minus environment assets)
+*   - POLYGON Modular Characters - Low Poly 3D Art by Synty
 
 Another ingenius portals implementation: 
 https://youtu.be/PkGjYig8avo
-This particular video helped me troubleshoot how to shoot the portals. Ended up doing the shooting from scratch anyway but it helped me figure out the logic LOL
+This particular video helped me troubleshoot how to shoot the portals. Ended up doing the shooting from scratch anyway but it helped Tommy figure out the logic LOL
+
+Other Texture Assets:
+https://assetstore.unity.com/packages/3d/environments/medieval-castle-227378
