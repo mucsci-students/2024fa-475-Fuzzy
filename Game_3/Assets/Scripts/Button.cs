@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Button : MonoBehaviour
 {
-    private bool activated;    
+    public bool activated;    
     public bool multi;
     public bool pressed;
     public bool toggleable;
@@ -28,20 +28,24 @@ public class Button : MonoBehaviour
 
     }
     //turn off is true if result of button press should be deactivated
-    void activate(bool turnOff)
+    void activate(bool active)
     {
         //closedObj.SetActive(TurnOff);
         //openObj.SetActive(!TurnOff);
         //closedObj.transform.Rotate(new Vector3(0f,80f,0f));
-        StartCoroutine(Open(turnOff, 115));
-        activated = !turnOff;
-
+        StartCoroutine(Open(active, 115));
+        if(multi)
+        {
+            foreach (Button b in transform.parent.GetComponentsInChildren<Button>())
+            {   
+                b.activated = active;
+            }
+        }
     }
     IEnumerator Open(bool open, int dist)
     {
-        Debug.Log("open");
         int speed = 1;
-        if (open)
+        if (!open)
         {
             speed = -1;
         }
@@ -58,7 +62,7 @@ public class Button : MonoBehaviour
         pressed = true;
         if(multi)
         {
-            foreach( Button b in transform.parent.GetComponentsInChildren<Button>())
+            foreach (Button b in transform.parent.GetComponentsInChildren<Button>())
             {   
                 if(!b.pressed)
                 {
@@ -68,7 +72,7 @@ public class Button : MonoBehaviour
         }
         if(!activated)
         {
-            activate(false);
+            activate(true);
         }
     }
     void OnTriggerExit(Collider other)
@@ -84,9 +88,9 @@ public class Button : MonoBehaviour
                 }
             }
         }
-        if(toggleable)
+        if(toggleable && activated)
         {
-            activate(true);
+            activate(false);
         }
     }
 }
