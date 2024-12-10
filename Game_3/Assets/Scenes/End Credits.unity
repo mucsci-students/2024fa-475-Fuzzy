@@ -179,19 +179,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Developers:
-
-
-    Audio:
-
-
-    Animator:
-
-
-    Level Designer:
-
-
-    Professor: '
+  m_text: "Developers:\n\nAudio:\n\nAnimator:\n\nLevel Designer:\n\nProfessor: \n\nAssets,
+    Unity Store:\n\nOriginal Portal Logic:"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -254,7 +243,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -58.631226, y: 0, z: 0, w: -329.79996}
+  m_margin: {x: -121.053406, y: 0, z: 0, w: -329.79996}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -397,8 +386,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Tommy Nguyen, John H., Tim K. \n\nTommy Nguyen\n\nTommy Nguyen\n\nTommy
-    Nguyen, John H., Tim K.\n\nDr. Hogg"
+  m_text: "Tommy Nguyen, John Hershey, Tim King \n\nTommy Nguyen\n\nTommy Nguyen\n\nTommy
+    Nguyen, John Hershey, Tim King\n\nDr. Hogg\n\nMedieval Castle, Low Poly Assets\n\nSebastian
+    Lague"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -461,7 +451,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -58.631226, y: 0, z: -359.11536, w: -329.79996}
+  m_margin: {x: -58.631226, y: 0, z: -362.7284, w: -329.79996}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

@@ -11,7 +11,7 @@ public class YouWin : MonoBehaviour
     void OnTriggerEnter(Collider col) {
         GameObject player = GameObject.Find("Player");
         if(col.gameObject == player) {
-            youWinText.text = "You're free! Thanks for playing our game!";
+            youWinText.text = "You've passed! Thanks for playing our game!";
         }
 
         StartCoroutine(teleportToNewWorld());

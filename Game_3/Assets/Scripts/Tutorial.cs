@@ -80,7 +80,7 @@ public class Tutorial : MonoBehaviour
         yield return new WaitUntil(() => !Input.GetKeyDown(KeyCode.Return));
         if (waitForSkip != true) {
             Debug.Log("'learnObjective' Ran");
-            tutorialText.text = "Each level is a puzzle to solve. Use your portals to move to the next stage! ('Enter' to continue)";
+            tutorialText.text = "Each level is a test of your abilities. Use your portals to move to the next stage! ('Enter' to continue)";
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Return));
         }
     }
