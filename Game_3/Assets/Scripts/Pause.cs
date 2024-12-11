@@ -55,6 +55,11 @@ public class Pause : MonoBehaviour
             pauseUI.SetActive(true);
         }
     }
+
+    public void StartGame() {
+        SceneManager.LoadScene("scene1");
+    }
+
     //Quits the game
     public void Quit()
     {

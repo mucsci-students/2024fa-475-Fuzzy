@@ -94,6 +94,6 @@ public class Tutorial : MonoBehaviour
         Debug.Log("'endTutorial' Ran");
         tutorialText.text = "Ending tutorial. One moment...";
         yield return StartCoroutine(DestroyMessageAfterDelay(5f));
-        SceneManager.LoadScene("Scene2");
+        SceneManager.LoadScene("scene2");
     }
 }
